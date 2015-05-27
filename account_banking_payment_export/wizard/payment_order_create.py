@@ -81,7 +81,7 @@ class PaymentOrderCreate(models.TransientModel):
         :returns: list of move line ids
         """
         payment_lines = self.env['payment.line'].\
-            search([('order_id.state', 'in', ('draft', 'open')),
+            search([('order_id.state', 'in', ('draft', 'open', 'done')),
                     ('move_line_id', 'in', lines.ids)])
         to_exclude = set([l.move_line_id.id for l in payment_lines])
         return [l.id for l in lines if l.id not in to_exclude]
