@@ -16,8 +16,10 @@ so it is easier to block an invoice.
 Installation
 ============
 
-This module depends on account_banking_payment_export that is part 
-of the OCA/bank-payment suite.
+This module depends on 
+* account_banking_payment_export
+
+This module is part of the OCA/bank-payment suite.
 
 Configuration
 =============
@@ -32,6 +34,7 @@ or on payable/receivable journal items.
 
 These invoices will not be proposed for inclusion in payment orders.
 
+
 For further information, please visit:
 
  * https://www.odoo.com/forum/help-1
@@ -39,7 +42,7 @@ For further information, please visit:
 Known issues / Roadmap
 ======================
 
-None.
+ * No known issues.
 
 
 Bug Tracker

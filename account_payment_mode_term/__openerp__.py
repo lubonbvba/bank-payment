@@ -26,7 +26,7 @@
 
 {
     'name': 'Account Banking - Payments Term Filter',
-    'version': '0.1.1',
+    'version': '8.0.0.1.2',
     'license': 'AGPL-3',
     'author': "Banking addons community,Odoo Community Association (OCA)",
     'website': 'https://github.com/OCA/banking',
@@ -37,11 +37,6 @@
     'data': [
         'views/payment_mode.xml',
     ],
-    'description': '''Payment term filter on payment mode.
-
-    When set, only open invoices corresponding to the mode's
-    payment term are proposed when populating payment orders.
-    ''',
     'auto_install': False,
     'installable': True,
 }
