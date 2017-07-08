@@ -10,7 +10,7 @@ try:
     # the module account_payment, because the store attribute is set later
     # and Odoo doesn't defer this removal
     from openerp.addons.account_payment.account_payment import payment_order
-    payment_order._columns['total'].nodrop = True
+    setattr(payment_order._columns['total'], 'nodrop', True)
 except ImportError:
     pass
 
@@ -136,6 +136,9 @@ class PaymentOrder(models.Model):
                 elif order.date_prefered == 'fixed':
                     requested_date = order.date_scheduled or today
                 else:
+                    requested_date = today
+                # No payment date in the past
+                if requested_date < today:
                     requested_date = today
                 # Write requested_date on 'date' field of payment line
                 payline.date = requested_date

@@ -3,13 +3,15 @@
 # * account_banking_payment_transfer
 # 
 # Translators:
+# TonySpain <acl.disval@gmail.com>, 2017
+# TonySpain <acl.disval@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: bank-payment (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-08 00:46+0000\n"
-"PO-Revision-Date: 2016-04-06 00:14+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2017-03-17 01:56+0000\n"
+"PO-Revision-Date: 2017-03-17 12:40+0000\n"
+"Last-Translator: TonySpain <acl.disval@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-bank-payment-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:128
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:137
 #, python-format
 msgid "%s bank line %s"
 msgstr ""
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:162
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:171
 #, python-format
 msgid "%s line %s"
 msgstr ""
@@ -40,18 +42,23 @@ msgid "Bank Payment Lines"
 msgstr "Líneas de pago bancario"
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:70
+#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:76
 #, python-format
 msgid "Can not reconcile: no move line for payment line %s of partner '%s'."
-msgstr ""
+msgstr "No se puede conciliar: no hay apunte para la línea de pago %s de la empresa '%s'."
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:185
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:194
 #, python-format
 msgid ""
 "Cannot generate the transfer move when the currency of the payment (%s) is "
-"not the same as the currency of the company. This is not supported for the "
-"moment."
+"not the same as the currency of the company (%s). This is not supported for "
+"the moment."
+msgstr ""
+
+#. module: account_banking_payment_transfer
+#: help:bank.payment.line,transfer_move_line_id:0
+msgid "Counterpart move line on the transfer account"
 msgstr ""
 
 #. module: account_banking_payment_transfer
@@ -60,18 +67,18 @@ msgid "Date Confirmed"
 msgstr ""
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:221
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:230
 #, python-format
 msgid "Direct debit"
 msgstr "Adeudo directo (cobro)"
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:84
+#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:90
 #, python-format
 msgid ""
 "For partner '%s', the account of the account move line to pay (%s) is "
 "different from the account of of the transit move line (%s)."
-msgstr ""
+msgstr "Para la empresa '%s', la cuenta del apunte a pagar (%s) es diferente de la cuenta del apunte de tránsito (%s)."
 
 #. module: account_banking_payment_transfer
 #: help:payment.mode,transfer_journal_id:0
@@ -82,13 +89,13 @@ msgstr ""
 #. module: account_banking_payment_transfer
 #: field:payment.line,msg:0
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:76
+#: code:addons/account_banking_payment_transfer/model/bank_payment_line.py:82
 #, python-format
 msgid "Move line '%s' of partner '%s' has already been reconciled"
-msgstr ""
+msgstr "El apunte '%s' de la empresa '%s' ya ha sido conciliado"
 
 #. module: account_banking_payment_transfer
 #: help:bank.payment.line,transit_move_line_id:0
@@ -98,17 +105,22 @@ msgstr ""
 #. module: account_banking_payment_transfer
 #: selection:payment.mode,transfer_move_option:0
 msgid "One move per payment date"
-msgstr ""
+msgstr "Un asiento por fecha de pago"
 
 #. module: account_banking_payment_transfer
 #: selection:payment.mode,transfer_move_option:0
 msgid "One move per payment line"
+msgstr "Un asiento por línea de pago"
+
+#. module: account_banking_payment_transfer
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:273
+#, python-format
+msgid "Partial Reconcile Moves Line"
 msgstr ""
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:264
-#, python-format
-msgid "Partial Reconcile Moves Line"
+#: field:payment.order,partial_reconcile_count:0
+msgid "Partial Reconciles Counter"
 msgstr ""
 
 #. module: account_banking_payment_transfer
@@ -119,7 +131,7 @@ msgid ""
 msgstr ""
 
 #. module: account_banking_payment_transfer
-#: code:addons/account_banking_payment_transfer/model/account_payment.py:220
+#: code:addons/account_banking_payment_transfer/model/account_payment.py:229
 #, python-format
 msgid "Payment"
 msgstr "Pago"
@@ -142,7 +154,7 @@ msgstr "Orden de pago"
 #. module: account_banking_payment_transfer
 #: field:payment.order,date_sent:0
 msgid "Send date"
-msgstr ""
+msgstr "Fecha de envío"
 
 #. module: account_banking_payment_transfer
 #: field:payment.mode,transfer_account_id:0
@@ -157,6 +169,11 @@ msgstr ""
 #. module: account_banking_payment_transfer
 #: field:bank.payment.line,transit_move_line_id:0
 msgid "Transfer move line"
+msgstr ""
+
+#. module: account_banking_payment_transfer
+#: field:bank.payment.line,transfer_move_line_id:0
+msgid "Transfer move line counterpart"
 msgstr ""
 
 #. module: account_banking_payment_transfer
